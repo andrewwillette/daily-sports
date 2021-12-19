@@ -56,9 +56,9 @@ func PrintTodayNflGames() {
 	if err := json.Unmarshal(body, &nflResponse); err != nil {
 		log.Fatal(err)
 	}
-    fmt.Println()
+	fmt.Println()
 	fmt.Println(strings.Repeat("🏈", 8))
-    fmt.Println()
+	fmt.Println()
 	for _, game := range nflResponse.Data {
 		gameDayStartTime := convertUTCtoCentralNfl(game.Date)
 		if gameDayStartTime.Format("2006-01-02") == time.Now().Format("2006-01-02") {

@@ -71,9 +71,9 @@ func convertUTCtoCentralNba(utcString string) time.Time {
 }
 
 func PrintTodayNbaGames() {
-    fmt.Println()
+	fmt.Println()
 	fmt.Println(strings.Repeat("🏀", 8))
-    fmt.Println()
+	fmt.Println()
 	currentDay := time.Now()
 	printDailyNbaGames(currentDay)
 	// have to call api for today and tomorrow due to return times being UTC time
